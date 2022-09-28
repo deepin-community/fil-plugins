@@ -1,0 +1,109 @@
+fil-plugins (0.3.0-6) unstable; urgency=medium
+
+  * Set dh 10.
+  * Update copyright file.
+  * Sign tags.
+  * Bump Standards.
+  * Fix VCS fields.
+  * Fix hardening.
+  * Add patch to avoid useless linking.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Thu, 22 Dec 2016 02:20:21 +0100
+
+fil-plugins (0.3.0-5) unstable; urgency=medium
+
+  * Update copyright file.
+  * Added patch to remove LADSPA_PROPERTY_REALTIME. (Closes: #765554)
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Thu, 10 Sep 2015 10:36:02 +0200
+
+fil-plugins (0.3.0-4) unstable; urgency=medium
+
+  * Bump Standards.
+  * Set dh/compat 9.
+  * Remove DMUA.
+  * Enable parallel build.
+  * Fix VCS fields.
+  * Add patch to pass LDFLAGS.
+  * Add local-option file.
+  * Improve .gitignore file.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Thu, 11 Jun 2015 01:40:33 +0200
+
+fil-plugins (0.3.0-3) unstable; urgency=low
+
+  [ Jaromír Mikeš ]
+  * Add myself as uploader.
+  * Copyright updated to format 1.0
+  * Fix homepage in control file
+  * Fix URL in copyright file
+  * Fix watch file.
+  * Bump Standards.
+
+  [ Alessio Treglia ]
+  * Set DM-Upload-Allowed: yes.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Sun, 15 Apr 2012 16:21:41 +0200
+
+fil-plugins (0.3.0-2) unstable; urgency=low
+
+  * Team upload.
+  * Switch to format 3.0 (quilt).
+  * Small corrections to debian/watch file.
+  * Add git-buildpackage config file.
+  * Add "Provides: ladspa-plugin" field, as per
+    http://wiki.debian.org/DebianMultimedia/Policy
+  * Remove myself from the Uploaders field.
+  * Fix gbp.conf file.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Fri, 03 Jun 2011 10:31:47 +0200
+
+fil-plugins (0.3.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to debhelper 7.
+  * Switch to quilt patch system.
+  * Refresh and convert all patches to quilt format.
+  * debian/control:
+    - Bump Standards.
+    - Set Debian Multimedia Maintainers as Maintainer.
+    - Add myself as uploader.
+    - Allow uploads by DM.
+    - Add Vcs-* tags.
+    - Add Homepage field.
+    - Build-depend on ladspa-sdk.
+  * Bump debian/watch version to 3.
+  * Update debian/copyright.
+
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Sat, 09 Jan 2010 01:53:21 +0100
+
+fil-plugins (0.1.0-2) unstable; urgency=low
+
+  * Fixed watch filed
+  * FTBFS if built twice in a row (Closes: #424264)
+
+ -- Free Ekanayaka <freee@debian.org>  Mon, 28 May 2007 13:32:10 +0200
+
+fil-plugins (0.1.0-1) unstable; urgency=low
+
+  * New upstream release
+  * New package maintainer Debian Multimedia Team <debian-multimedia@lists.debian.org>
+  * Updated policy standard
+  * Bug fix: "Spelling mistake in package description", thanks to Simon
+    Waters (Closes: #363412).
+
+ -- Free Ekanayaka <freee@debian.org>  Tue, 23 May 2006 07:54:50 +0200
+
+fil-plugins (0.0.1-2) unstable; urgency=low
+
+  * Rebuilt against libstdc++6
+
+ -- Free Ekanayaka <free@agnula.org>  Wed, 16 Nov 2005 01:44:00 +0000
+
+fil-plugins (0.0.1-1) unstable; urgency=low
+
+  * First upload to Debian (closes: #276495)
+
+ -- Free Ekanayaka <free@agnula.org>  Tue, 25 Jan 2005 11:06:21 +0100
+

@@ -1,0 +1,18 @@
+Author: Jaromír Mikeš <mira.mikes@seznam.cz>
+Description: Remove LADSPA_PROPERTY_REALTIME.
+Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=765554
+Forwarded: no
+
+Index: fil-plugins/filters_if.cc
+===================================================================
+--- fil-plugins.orig/filters_if.cc
++++ fil-plugins/filters_if.cc
+@@ -159,7 +159,7 @@ static const LADSPA_Descriptor moddescr
+   {
+     1970,
+     label0,
+-    LADSPA_PROPERTY_REALTIME | LADSPA_PROPERTY_HARD_RT_CAPABLE,
++    LADSPA_PROPERTY_HARD_RT_CAPABLE,
+     name0,
+     maker,
+     copyr,

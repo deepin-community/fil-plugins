@@ -1,0 +1,25 @@
+Origin: Debian
+Description: Pass DESTDIR path to make install.
+---
+ Makefile |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+--- fil-plugins.orig/Makefile
++++ fil-plugins/Makefile
+@@ -14,6 +14,7 @@
+ #    along with this program; if not, write to the Free Software
+ #    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
++DESTDIR =
+ 
+ CPPFLAGS += -I. -fPIC -D_REENTRANT -Wall -O3
+ 
+@@ -28,7 +29,7 @@ filters.o:	ladspaplugin.h filters.h
+ filters_if.o:	ladspaplugin.h filters.h
+ 
+ install:	all
+-	cp  *.so /usr/lib/ladspa
++	cp  *.so $(DESTDIR)/usr/lib/ladspa
+ 
+ clean:
+ 	/bin/rm -f *~ *.o *.so

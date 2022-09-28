@@ -1,0 +1,36 @@
+Source: fil-plugins
+Section: sound
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Free Ekanayaka <freee@debian.org>,
+ Jaromír Mikeš <mira.mikes@seznam.cz>
+Build-Depends:
+ debhelper (>= 10),
+ ladspa-sdk
+Standards-Version: 3.9.8
+Homepage: http://kokkinizita.linuxaudio.org/linuxaudio/index.html
+Vcs-Git: https://anonscm.debian.org/git/pkg-multimedia/fil-plugins.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-multimedia/fil-plugins.git
+
+Package: fil-plugins
+Architecture: any
+Provides:
+ ladspa-plugin
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: parametric equalizer LADSPA plugin
+ Four-band parametric equaliser. Each section has an active/bypass switch,
+ frequency, bandwidth and gain controls. There is also a global bypass
+ switch and gain control.
+ .
+ The 2nd order resonant filters are implemented using a Mitra-Regalia
+ style lattice filter, which has the nice property of being stable
+ even while parameters are being changed.
+ .
+ All switches and controls are internally smoothed, so they can
+ be used 'live' without any clicks or zipper noises. This should
+ make this plugin a good candidate for use in systems that allow
+ automation of plugin control ports, such as Ardour, or for
+ stage use.

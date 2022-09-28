@@ -1,0 +1,17 @@
+Author: Jaromír Mikeš <mira.mikes@seznam.cz>
+Description: Avoid useless linking.
+Forwarded: no
+
+Index: fil-plugins/Makefile
+===================================================================
+--- fil-plugins.orig/Makefile
++++ fil-plugins/Makefile
+@@ -23,7 +23,7 @@ all:	filters.so
+ 
+ 
+ filters.so:	filters.o filters_if.o exp2ap.o
+-	g++ $(LDFLAGS) -shared filters.o filters_if.o exp2ap.o -o filters.so
++	g++ $(LDFLAGS) -shared filters.o filters_if.o exp2ap.o -o filters.so -Wl,--as-needed
+ 
+ filters.o:	ladspaplugin.h filters.h
+ filters_if.o:	ladspaplugin.h filters.h
